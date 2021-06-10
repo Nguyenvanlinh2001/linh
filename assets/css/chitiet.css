@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.grid{
+    width: 100%;
+    margin: 0 auto;
+}
+.wide{
+    width: 1000px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.l4{
+    width: 33.33333%;
+}
+.l8{
+    width: 66.66667%;
+}
+.img__title{
+    text-transform: uppercase;
+    color: cornflowerblue;
+    font-size: 20px;
+}
+.slide__item{
+    width: 100%;
+    display: none;
+}
+.slide__item-active{
+    display: block;
+}
+.show__item{
+    width: 100%;
+}
+.show__img-item{
+    width: 80px;
+}
+.content__show{
+    display: flex;
+}
+.show__img-item{
+    border: solid 1px #ccc;
+}
+.content__title{
+    font-size: 28px;
+    color: #212121;
+    font-weight: bold;
+}
+.gia{
+    font-size: 22px;
+    margin-top: 20px;
+}
+.coin{
+    color: red;
+}
+.select__title{
+    color: #616161;
+    line-height: 35px;
+}
+.select__title span{
+    color: #212121;
+    font-weight: bold;
+}
+.select__item{
+    display: flex;
+}
+.select__item-content{
+    border: solid 1px cornflowerblue;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.select__item-active{
+    background-color: cornflowerblue;
+    color: #fff;
+}
+.select__number{
+    margin-top: 50px;
+}
+.btn{
+    border: solid 1px #ccc;
+    padding: 6px 12px;
+    outline: none;
+    width: 35px;
+}
+.content__number{
+    display: flex;
+    align-items: flex-end;
+}
+.buy{
+    width: fit-content;
+    height: fit-content;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(247, 31, 31, 0.637);
+    color: #fff;
+    padding: 10px 30px;
+}
+.btn__input{
+    width: 40px;
+}
+.title__form{
+    margin-top: 20px;
+}
+.form__content{
+    background-color: #ccc;
+    color: #1d1d1d;
+    width: 33.33333%;
+}
+.form{
+    display: flex;
+}
+.form__info{
+    flex: 1;
+}
+.form__item{
+    padding: 12px 24px;
+}
+.form__info{
+    background-color: rgb(226, 226, 226);
+}
+.info__content{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}

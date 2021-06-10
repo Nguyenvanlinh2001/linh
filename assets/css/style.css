@@ -1,0 +1,371 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+ html {
+     scroll-behavior: smooth;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+ .clear {
+    clear: both;
+}
+#main{
+    background-color: rgb(135,206,235);
+
+
+}
+#cart {
+    font-size: 15px;
+    color: #fff;
+    background: #c7b200;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    margin-left: 1rem;
+    padding: 12px;
+    cursor: pointer;
+    float: right;
+  }
+.header__navbar-item-link {
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    cursor: pointer;
+    line-height: 46px;
+    padding: 0 24px;
+}
+.header__navbar-item-link--strong{
+    font-weight: 500;
+}
+
+.header__navbar-item:hover,
+
+.header__navbar-item-link:hover{
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+#header{
+    height: 46px;
+    background-color:coral;
+    display: flex;
+    z-index: 1;
+    position: relative;
+}
+#nav {
+    display: inline-block;
+}
+/* bỏ dấu chấm */
+#nav, .subnar {
+    list-style-type: none;
+}
+/* trên 1 hàng ngang */
+#nav > li {
+    display: inline-block;
+
+}
+#nav li {
+    position: relative;
+   
+}
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav li a {
+    /* tắt chữ gạch chân */
+    text-decoration: none; 
+    line-height: 46px;
+    padding: 0 20px;
+    display: block;
+    
+}
+#nav li:hover .subnar {
+    display: block;
+}
+/* kích chuột sáng */
+#nav .subnar li:hover a,
+#nav > li:hover > a {
+    color: black;
+    background-color: #ccc;
+     
+/* ẩn thẻ con */
+}
+#nav .subnar {  
+    background-color: #fff;
+    position: absolute;
+    /* bóng đổ */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    min-width: 160px;
+    display:none
+
+    
+}
+#nav .subnar a {
+    color: black;
+    padding: 0 16px;
+    line-height: 38px;
+}
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+body{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+*{
+    box-sizing: border-box;
+
+}
+.search {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+
+}
+
+.search input {
+    width: 90%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgb(179, 175, 175);
+    border-radius: 3px 0px 0px 3px;
+}
+
+.search button {
+    border: none;
+    padding: 11px;
+    background: #015092;
+    color: #fff;
+    border-radius: 0px 3px 3px 0px;
+    cursor: pointer;
+}
+.itemt {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 0px;
+}
+.itemt li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+.itemt li:hover a {
+    color: black;
+    background-color: #ccc;
+}
+.container {
+    margin-top: 20px;
+}
+.container-item{
+    text-align: center;
+}
+.container .container-item h4 {
+    color: red;
+}
+.container .container-item a:hover {
+    background-color: blue;
+    color: #ccc;
+    padding: 5px 10px;
+    
+    
+}
+.container .container-item a {
+    text-decoration: none;  
+    display: inline-block;
+    margin-top: 15px;
+    background-color: cadetblue;
+    padding: 5px 5px;
+
+}
+.container-banner{
+    text-align: center;
+}
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1500px;
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+  }
+  /* Ẩn các slider */
+  .mySlides {
+      display: none;
+  }  
+  /* định dạng các chấm chuyển đổi các slide */
+  .dot {
+    cursor:pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  /* khi được hover, active đổi màu nền */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+   
+  /* Thêm hiệu ứng khi chuyển đổi các slide */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+   
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+   
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+/* #slider {
+    position: relative;
+    padding-top: 40%;
+    background-image: url("/assets/img/slider.jpg");
+    background-repeat: no-repeat;
+    /* căn giữa ảnh */
+    /* background-position: top center;
+    background-size: cover;
+
+} */ 
+/* #slider .text-content {
+    position: absolute;
+     bottom: 47px;
+     color:#fff;
+     width: 100%    ;
+     /* căn giữ chữ */
+     /* left: 50%;
+     transform: translateX(-50%); */
+     /* text-align: center;
+} */ 
+/* #slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+
+}
+#slider .text-description {
+    font-size: 15px;
+    margin-top: 25px;
+} */
+#content    {
+
+
+}
+#content .content-sections {
+    /* width: 1300px;    */
+    margin-right: auto;
+    margin-left: auto;
+    padding: 64px 0 112px;
+    background-color:rgba(0,0,0,0.5);
+    color: #ccc;
+    margin-top: 25px;
+}
+#content .content-section {
+    /* width: 1300px;    */
+    margin-right: auto;
+    margin-left: auto;
+    padding: 64px 0 112px;
+}
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    /* chữ tách nhau */
+}
+.contact-content {
+    margin-top: 48px;
+    
+}
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}  
+.contact-form {
+    font-size: 15px;
+}
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.pull-right {
+    float:right !important;
+}
+.btn {
+    color: #fff;
+    background-color: blue;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+}
+.btn:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #ccc;
+}
+.mt-8 {
+    margin-top: 8px !important;
+}
+.mt-16 {
+    margin-top: 16px !important;
+}
+.content-linh {
+    margin-bottom: 15px;
+}
+.content-bai {
+    margin-bottom: 15px;
+
+}
+.content-hat {
+    margin-bottom: 15px;
+}
+.contact-content .contact-infor a {
+    text-decoration: none;
+    font-size: 20px;
+}
+.contact-content .contact-infor {
+    line-height: 1.5;
+}
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 80%;
+}
+
+.col-half {
+    width: 30%;
+}
+.col-third {
+    width: 33.33333%;
+}
+#footer{
+
+
+}

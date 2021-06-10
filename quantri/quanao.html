@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css">
+</head>
+<style>
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+    .header {
+        height: 200px;
+        background-color: cadetblue;
+        display: flex;
+    }
+    .header-1 {
+        font-size: 40px;
+        margin-top: 50px;
+        margin-left: 500px;
+    }
+    .header-2 {
+        margin-top: 40px;
+        margin-left: 300px;
+        font-size: 30px;
+    }
+    .container {
+        height: 50px;
+        background-color: rgb(135,206,235);
+        display: flex;
+    }
+    .container-1 {
+        display: flex;
+        
+    }
+    .container-1 a {
+        text-decoration: none; 
+    }
+    .container-1 li {
+        list-style-type: none;
+        margin-top: 15px;
+    }
+    .content {
+        width: 20%;
+        height: 600px;
+        background-color: cadetblue;
+        float: left;
+    }
+    .content-1 li {
+        list-style-type: none;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .content-1 a {
+        text-decoration: none;
+    }
+    .itemt {
+        margin-top: 15px;
+    }
+    .footer {
+        float: right;
+        width: 75%;
+        font-size: 20px;
+    }
+    .img {
+        width: 100%;
+    }
+    .footer-1 {
+        padding: 0px 10px;
+        background-color: rgb(135,206,235);
+    }
+    .footer-2 {
+        padding: 0px 10px;
+        text-align: center;
+    }
+    .footer-3 {
+        padding: 0 28px;
+    }
+    .footer-3:hover {
+        cursor: pointer;
+    } 
+
+</style>
+<body>
+    <div class="header">
+       <div class="header-1">
+        <h1">Quản trị nội dung</h1> 
+       </div>
+       <div class="header-2">
+           <h2>Trợ giúp</h2>
+       </div>
+    </div>
+    <div class="container">
+        <ul class="container-1">
+            <li><a href="/index.html">Trang chủ</a></li>
+            <i class="itemt ti-angle-right "></i>
+            <li><a href="/login.html">Đăng nhập</a></li>
+            <i class="itemt ti-angle-right "></i>
+            <li><a href="">Quản trị</a></li
+        </ul>       
+    </div>
+    <div class="img">
+        <div class="content">
+            <ul class="content-1">
+                <li><a href="/index.html"><i class="ti-home"></i> Trang chủ</a></li>
+                <li><a href="#"><i class="ti-gift"></i> Quản lý quần áo</a></li>
+                <li><a href="/quantri/donhang.html"><i class="ti-shopping-cart"></i>Quản lý đơn hàng chưa xác thực</a></li>
+                <li><a href="/quantri/donhangdaxacthuc.html"><i class="ti-shopping-cart-full"></i>Quản lý đơn hàng đã xác thực</a></li>
+                <li><a href="/quantri/donhangdagiao.html"><i class="ti-truck"></i> Quản lý đơn hàng đã giao</a></li>
+                <li><a href="/quantri/nhacungcap.html"><i class="ti-id-badge"></i> Quản lý nhà cung cấp</a></li>
+                <li><a href="/quantri/hoadonnhap.html"><i class="ti-align-justify"></i> Quản lý nhập hàng</a></li>
+                <li><a href="/quantri/chitiethoadon.html"><i class="ti-money"></i> Thống kê doanh số</a></li>
+            </ul> 
+        </div>
+        <div class="footer">
+            <h1 style="padding: 20px 0;">Quần áo</h1>
+            <table border="1px">
+                <tr>
+                    <td class="footer-1">Mã quần áo</td>
+                    <td class="footer-1">Tên quần áo</td>
+                    <td class="footer-1">Mã loại</td>
+                    <td class="footer-1">Hình ảnh</td>
+                    <td class="footer-1">Size</td>
+                    <td class="footer-1">Số lượng</td>
+                    <td class="footer-1">Giá</td>
+                    <td class="footer-1">Sửa</td>
+                    <td class="footer-1">Xóa</td>
+                </tr>
+                <tr>
+                    <td class="footer-2">M01</td>
+                    <td class="footer-2">CLB Barcelona</td>
+                    <td class="footer-2">ML01</td>
+                    <td><img style="width: 50px; margin-left: 20px;" src="/assets/img/2/Culi.jpg" alt=""></td>
+                    <td class="footer-2">M</td>
+                    <td class="footer-2">10</td>
+                    <td class="footer-2">1000000</td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-comment-alt"></i></a></td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-trash"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="footer-2">M02</td>
+                    <td class="footer-2">CLB Chelsea</td>
+                    <td class="footer-2">ML02</td>
+                    <td><img style="width: 50px; margin-left: 20px;" src="/assets/img/2/CHEA.jpg" alt=""></td>
+                    <td class="footer-2">L</td>
+                    <td class="footer-2">20</td>
+                    <td class="footer-2">2000000</td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-comment-alt"></i></a></td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-trash"></i></a></td>
+                    
+                </tr>
+                <tr>
+                    <td class="footer-2">M03</td>
+                    <td class="footer-2">CLB Juventus</td>
+                    <td class="footer-2">ML03</td>
+                    <td><img style="width: 50px; margin-left: 20px;" src="/assets/img/2/JV.jpg" alt=""></td>
+                    <td class="footer-2">XL</td>
+                    <td class="footer-2">30</td>
+                    <td class="footer-2">3000000</td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-comment-alt"></i></a></td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-trash"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="footer-2">M04</td>
+                    <td class="footer-2">CLB Manchester United</td>
+                    <td class="footer-2">ML04</td>
+                    <td><img style="width: 50px; margin-left: 20px;" src="/assets/img/2/mu.jpg" alt=""></td>
+                    <td class="footer-2">M</td>
+                    <td class="footer-2">40</td>
+                    <td class="footer-2">4000000</td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-comment-alt"></i></a></td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-trash"></i></a></td>
+                </tr>
+            </table>   
+        </div>
+
+    </div>
+</body>
+</html>

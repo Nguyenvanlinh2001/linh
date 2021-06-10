@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css">
+</head>
+<style>
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+    .header {
+        height: 200px;
+        background-color: cadetblue;
+        display: flex;
+    }
+    .header-1 {
+        font-size: 40px;
+        margin-top: 50px;
+        margin-left: 500px;
+    }
+    .header-2 {
+        margin-top: 40px;
+        margin-left: 300px;
+        font-size: 30px;
+    }
+    .container {
+        height: 50px;
+        background-color: rgb(135,206,235);
+        display: flex;
+    }
+    .container-1 {
+        display: flex;
+        
+    }
+    .container-1 a {
+        text-decoration: none; 
+    }
+    .container-1 li {
+        list-style-type: none;
+        margin-top: 15px;
+    }
+    .content {
+        width: 20%;
+        height: 600px;
+        background-color: cadetblue;
+        float: left;
+    }
+    .content-1 li {
+        list-style-type: none;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .content-1 a {
+        text-decoration: none;
+    }
+    .itemt {
+        margin-top: 15px;
+    }
+    .footer {
+        float: right;
+        width: 75%;
+        font-size: 20px;
+    }
+    .img {
+        width: 100%;
+    }
+    .footer-1 {
+        padding: 0px 25px;
+        background-color: rgb(135,206,235);
+    }
+    .footer-2 {
+        padding: 0px 25px;
+        text-align: center;
+    }
+    .footer-3 {
+        padding: 0 28px;
+    }
+    .footer-3:hover {
+        cursor: pointer;
+    } 
+
+</style>
+<body>
+    <div class="header">
+       <div class="header-1">
+        <h1">Quản trị nội dung</h1> 
+       </div>
+       <div class="header-2">
+           <h2>Trợ giúp</h2>
+       </div>
+    </div>
+    <div class="container">
+        <ul class="container-1">
+            <li><a href="/index.html">Trang chủ</a></li>
+            <i class="itemt ti-angle-right "></i>
+            <li><a href="/login.html">Đăng nhập</a></li>
+            <i class="itemt ti-angle-right "></i>
+            <li><a href="">Quản trị</a></li>
+        </ul>       
+    </div>
+    <div class="img">
+        <div class="content">
+            <ul class="content-1">
+                <li><a href="/index.html"><i class="ti-home"></i> Trang chủ</a></li>
+                <li><a href="/quantri/quanao.html"><i class="ti-gift"></i> Quản lý quần áo</a></li>
+                <li><a href="/quantri/donhang.html"><i class="ti-shopping-cart"></i>Quản lý đơn hàng chưa xác thực</a></li>
+                <li><a href="/quantri/donhangdaxacthuc.html"><i class="ti-shopping-cart-full"></i>Quản lý đơn hàng đã xác thực</a></li>
+                <li><a href="/quantri/donhangdagiao.html"><i class="ti-truck"></i> Quản lý đơn hàng đã giao</a></li>
+                <li><a href="#"><i class="ti-id-badge"></i> Quản lý nhà cung cấp</a></li>
+                <li><a href="/quantri/hoadonnhap.html"><i class="ti-align-justify"></i> Quản lý nhập hàng</a></li>
+                <li><a href="/quantri/chitiethoadon.html"><i class="ti-money"></i> Thống kê doanh số</a></li>
+            </ul> 
+        </div>
+        <div class="footer">
+            <h1 style="padding: 20px 0;">Nhà Cung Cấp</h1>
+            <table border="1px">
+                <tr>
+                    <td class="footer-1">Mã nhà cung cấp</td>
+                    <td class="footer-1">Tên nhà cung cấp</td>
+                    <td class="footer-1">Số điện thoại</td>
+                    <td class="footer-1">Địa chỉ</td>
+                    <td class="footer-1">Email</td>
+                    <td class="footer-1">Sửa</td>
+                    <td class="footer-1">Xóa</td>
+                </tr>
+                <tr>
+                    <td class="footer-2">NCC01</td>
+                    <td class="footer-2">Công Ty TNHH Xuất Nhập Khẩu May Bắc Ninh </td>
+                    <td class="footer-2">0981469736</td>
+                    <td class="footer-2">Thuận Thành  Bắc Ninh</td>
+                    <td class="footer-2">linh2001@gmail.com</td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-comment-alt"></i></a></td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-trash"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="footer-2">NCC02</td>
+                    <td class="footer-2">Công Ty TNHH Xuất Nhập Khẩu May Hà Nội</td>
+                    <td class="footer-2">0981452147</td>
+                    <td class="footer-2">Hoàn Kiếm, Hà Nội</td>
+                    <td class="footer-2">congty2001@gmail.com</td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-comment-alt"></i></a></td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-trash"></i></a></td>
+                    
+                </tr>
+                <tr>
+                    <td class="footer-2">NCC03</td>
+                    <td class="footer-2">Công ty TNHH xuất Nhập Khẩu May Hưng Yên</td>
+                    <td class="footer-2">0985973456</td>
+                    <td class="footer-2">Mỹ Hào, Hưng Yên</td>
+                    <td class="footer-2">tule2001@gmail.com</td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-comment-alt"></i></a></td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-trash"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="footer-2">NCC04</td>
+                    <td class="footer-2">Công ty TNHH xuất Nhập Khẩu May Bắc Giang</td>
+                    <td class="footer-2">0354145678</td>
+                    <td class="footer-2">Lục Ngạn, Bắc Giang</td>
+                    <td class="footer-2">Bacgiang2000@gmail.com</td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-comment-alt"></i></a></td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-trash"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="footer-2">NCC05</td>
+                    <td class="footer-2">Công ty TNHH xuất Nhập Khẩu May Hải Dương</td>
+                    <td class="footer-2">0312549999</td>
+                    <td class="footer-2">Chí Linh, Hải Dương</td>
+                    <td class="footer-2">Haiduong@gmail.com</td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-comment-alt"></i></a></td>
+                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-trash"></i></a></td>
+                </tr>
+            </table>   
+        </div>
+
+    </div>
+</body>
+</html>
