@@ -36,7 +36,7 @@
     font-weight: 300;
     cursor: pointer;
     line-height: 46px;
-    padding: 0 24px;
+    padding: 0 10px;
 }
 .header__navbar-item-link--strong{
     font-weight: 500;
@@ -112,6 +112,11 @@
 #nav .nav-arrow-down {
     font-size: 14px;
 }
+@media (max-width:1023px) {
+    #nav {
+        display: none;
+    }
+} 
 
 body{
     margin: 0 auto;
