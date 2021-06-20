@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./font/themify-icons/themify-icons.css">
 </head>
+<style>
+    .buy__now  {
+        text-decoration: none ;
+        background-color: blue;
+        color: #fff;
+        padding: 5px 5px;
+        margin: 0 10px 5px 15px;
+    }
+    .buy__now:hover {
+        background-color: #ccc;
+        color: #333;
+    }
+</style>
 <body>
     <div id="header">
         <ul id="nav">
@@ -56,14 +69,14 @@
                     <div class="content">
                         <div class="slide__img">
                             <img src="./img/1/VN.jpg" alt="" class="slide__item slide__item-active">
-                            <img src="./img/2/CHEA.jpg" alt="" class="slide__item">
-                            <img src="./img/1/BDN.jpg" alt="" class="slide__item">
+                            <img src="./img/1/00.jpg" alt="" class="slide__item">
+                            <img src="./img/1/11.jpg" alt="" class="slide__item">
                         </div>
                     </div>
                 </div>
                 <div class="col l8">
                     <div class="content__title">
-                        Áo sơ mi nam dài tay phong cách thời trang siêu cao cấp
+                        Quần áo đội tuyển quốc gia Việt Nam siêu cấp
                     </div>
                     <div class="gia">
                         Giá: 
@@ -94,7 +107,7 @@
                                 <div class="col">
                                     <div class="select__item-content">
                                         <span>
-                                            Xanh
+                                            Đen
                                         </span>
                                     </div>
                                 </div>
@@ -150,9 +163,9 @@
                                     </button>
                                 </div>
                             </div>
-                            <button class="btn buy">
-                                Chọn mua
-                            </button>
+                            <a onclick="addToCart({id:'01',image:'/assets/img/1/VN.jpg', price:160, name:'Classico 1'})" href="#" class="buy__now">
+                                Thêm vào giỏ
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -200,11 +213,11 @@
                 Mô tả sản phẩm
             </div>
             <div class="info__content">
-                <p>Áo sơ mi nam luôn là trang phục lựa chọn hàng đầu của nhiều chàng trai, bởi sự tiện ích và tính thời trang
+                <p>Quần áo đá bóng nam luôn là trang phục lựa chọn hàng đầu của nhiều chàng trai, bởi sự tiện ích và tính thời trang
                     mà nó mang lại cho người mặc.</p>
                     <br>
                 <p>
-                    Chúng tôi thường xuyên cập nhật những mẫu áo sơ mi mới từ kiểu dáng trơn, sọc caro đến sơ mi phối
+                    Chúng tôi thường xuyên cập nhật những mẫu quần áo đá bóng mới từ kiểu dáng trơn, sọc caro đến quần áo phối
                     họa tiết…, nhằm giúp khách hàng lựa chọn được những sản phẩm đẹp, chất lượng phù hợp với nhu cầu
                     và sở thích của mình một cách dễ dàng nhất.
                 </p>
@@ -218,5 +231,30 @@
         </div>
     </div>
     <script src="./JS/chitiet.js"></script>
+    <script>
+        function  addToCart(item) {    
+             item.quantity = 1;
+             console.log(item.quantity);
+             var list;
+             if (localStorage.getItem('cart') == null) {
+                 list = [item];
+             } else {
+                 list = JSON.parse(localStorage.getItem('cart')) || [];
+             let ok = true;
+             for (let x of list) {
+                 if (x.id == item.id) {
+                 x.quantity += 1;
+                 ok = false;
+                 break;
+                 }
+             }
+             if(ok){
+                 list.push(item); 
+             } 
+             }
+             localStorage.setItem('cart', JSON.stringify(list));
+             alert("Đã thêm giỏ hàng thành công");
+         }
+    </script>
 </body>
 </html>

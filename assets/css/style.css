@@ -16,6 +16,10 @@
 
 
 }
+.logo img {
+    width: 100px;
+    margin-left: 700px;
+}
 #cart {
     font-size: 15px;
     color: #fff;
