@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="/assets/JS/admin.js">
 </head>
 <style>
     * {
@@ -84,6 +85,29 @@
     .footer-3:hover {
         cursor: pointer;
     } 
+    .tab-2 input {
+    display: block;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 50%;
+    outline: none;
+    color: #0b0564a4;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.tab button {
+    border: none;
+    border: 1px solid #555;
+    margin-top: 20px;
+    padding: 10px;
+    width: 50%;
+}
+
+.tab button:hover {
+    background: #03a9f4;
+    color: white;
+}
 
 </style>
 <body>
@@ -107,7 +131,7 @@
     <div class="img">
         <div class="content">
             <ul class="content-1">
-                <li><a href="/index.html"><i class="ti-home"></i> Trang chủ</a></li>
+                <li><a href="/quantri.html"><i class="ti-home"></i> Trang chủ</a></li>
                 <li><a href="#"><i class="ti-gift"></i> Quản lý quần áo</a></li>
                 <li><a href="/quantri/donhang.html"><i class="ti-shopping-cart"></i>Quản lý đơn hàng chưa xác thực</a></li>
                 <li><a href="/quantri/donhangdaxacthuc.html"><i class="ti-shopping-cart-full"></i>Quản lý đơn hàng đã xác thực</a></li>
@@ -119,66 +143,180 @@
         </div>
         <div class="footer">
             <h1 style="padding: 20px 0;">Quần áo</h1>
-            <table border="1px">
+            <table id="table" border="1px">
                 <tr>
                     <td class="footer-1">Mã quần áo</td>
                     <td class="footer-1">Tên quần áo</td>
                     <td class="footer-1">Mã loại</td>
-                    <td class="footer-1">Hình ảnh</td>
                     <td class="footer-1">Size</td>
                     <td class="footer-1">Số lượng</td>
                     <td class="footer-1">Giá</td>
-                    <td class="footer-1">Sửa</td>
-                    <td class="footer-1">Xóa</td>
+                   
                 </tr>
                 <tr>
                     <td class="footer-2">M01</td>
                     <td class="footer-2">CLB Barcelona</td>
                     <td class="footer-2">ML01</td>
-                    <td><img style="width: 50px; margin-left: 20px;" src="/assets/img/2/Culi.jpg" alt=""></td>
                     <td class="footer-2">M</td>
                     <td class="footer-2">10</td>
                     <td class="footer-2">1000000</td>
-                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-comment-alt"></i></a></td>
-                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-trash"></i></a></td>
                 </tr>
                 <tr>
                     <td class="footer-2">M02</td>
                     <td class="footer-2">CLB Chelsea</td>
                     <td class="footer-2">ML02</td>
-                    <td><img style="width: 50px; margin-left: 20px;" src="/assets/img/2/CHEA.jpg" alt=""></td>
                     <td class="footer-2">L</td>
                     <td class="footer-2">20</td>
                     <td class="footer-2">2000000</td>
-                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-comment-alt"></i></a></td>
-                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-trash"></i></a></td>
                     
                 </tr>
                 <tr>
                     <td class="footer-2">M03</td>
                     <td class="footer-2">CLB Juventus</td>
                     <td class="footer-2">ML03</td>
-                    <td><img style="width: 50px; margin-left: 20px;" src="/assets/img/2/JV.jpg" alt=""></td>
                     <td class="footer-2">XL</td>
                     <td class="footer-2">30</td>
                     <td class="footer-2">3000000</td>
-                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-comment-alt"></i></a></td>
-                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-trash"></i></a></td>
                 </tr>
                 <tr>
                     <td class="footer-2">M04</td>
                     <td class="footer-2">CLB Manchester United</td>
                     <td class="footer-2">ML04</td>
-                    <td><img style="width: 50px; margin-left: 20px;" src="/assets/img/2/mu.jpg" alt=""></td>
                     <td class="footer-2">M</td>
                     <td class="footer-2">40</td>
                     <td class="footer-2">4000000</td>
-                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-comment-alt"></i></a></td>
-                    <td><a style="text-decoration:none ;" href="#"><i class="footer-3 ti-trash"></i></a></td>
                 </tr>
-            </table>   
+            </table>
+            <div class="tab tab-2">
+                <div style="padding-bottom: 10px;">
+                    <h2>Chức Năng Chính</h2>
+                </div>
+                Mã quần áo<input type="text" name="ma" id="ma"> 
+                Tên quần áo<input type="text" name="ten" id="ten">
+                Mã loại<input type="text" name="ml" id="ml"> 
+                Size<input type="text" name="size"id="size">
+                Số lượng<input type="text" name="sl"id="sl">
+                Giá<input type="text" name="gia"id="gia">
+
+    
+                <button onclick="refresh();">Làm Mới</button>
+                <button onclick="addHtmlTableRow();">Thêm Sản Phẩm</button>
+                <button onclick="editHtmlTbleSelectedRow();">Sửa Sản Phẩm</button>
+                <button onclick="removeSelectedRow();">Xóa Sản Phẩm</button>
+            </div>   
         </div>
 
     </div>
+    <script>
+        var user = JSON.parse(localStorage.getItem('user'));
+        if (!user) {
+            // window.location.href = "/html/login.html";
+        }
+    </script>
+
+    <script>
+        var rIndex,
+            table = document.getElementById("table");
+
+        function checkEmptyInput() {
+            var isEmpty = false,
+                ma = document.getElementById("ma").value,
+                ten = document.getElementById("ten").value,
+                ml = document.getElementById("ml").value,
+                size = document.getElementById("size").value;
+                sl = document.getElementById("sl").value;
+                gia = document.getElementById("gia").value;
+
+            
+             if (ten === "") {
+                alert("Tên Sản Phẩm không được để trống");
+                isEmpty = true;
+            } else if (sl === "") {
+                alert("Số Lượng Sản Phẩm không được để trống");
+                isEmpty = true;
+            } else if (dv === "") {
+                alert("Đơn Vị Sản Phẩm không được để trống");
+                isEmpty = true;
+            } else if (gia === "") {
+                alert("Giá Sản Phẩm không được để trống");
+                isEmpty = true;
+            }
+            return isEmpty;
+        }
+
+
+        function addHtmlTableRow() {
+
+            if (!checkEmptyInput()) {
+                var newRow = table.insertRow(table.length),
+                    cell1 = newRow.insertCell(0),
+                    cell2 = newRow.insertCell(1),
+                    cell3 = newRow.insertCell(2),
+                    cell4 = newRow.insertCell(3),
+                    ma = document.getElementById("ma").value,
+                ten = document.getElementById("ten").value,
+                ml = document.getElementById("ml").value,
+                size = document.getElementById("size").value;
+                sl = document.getElementById("sl").value;
+                gia = document.getElementById("gia").value;
+
+                cell1.innerHTML = ten;
+                cell2.innerHTML = sl;
+                cell3.innerHTML = dv;
+                cell4.innerHTML = gia;
+                
+
+                selectedRowToInput();
+            }
+        }
+
+
+        function selectedRowToInput() {
+
+            for (var i = 1; i < table.rows.length; i++) {
+                table.rows[i].onclick = function() {
+
+                    rIndex = this.rowIndex;
+                    document.getElementById("ten").value = this.cells[0].innerHTML;
+                    document.getElementById("sl").value = this.cells[1].innerHTML;
+                    document.getElementById("dv").value = this.cells[2].innerHTML;
+                    document.getElementById("gia").value = this.cells[3].innerHTML;
+                    
+                };
+            }
+        }
+        selectedRowToInput();
+
+        function editHtmlTbleSelectedRow() {
+            var ten = document.getElementById("ten").value,
+                sl = document.getElementById("sl").value,
+                dv = document.getElementById("dv").value,
+                gia = document.getElementById("gia").value;
+                
+            if (!checkEmptyInput()) {
+                table.rows[rIndex].cells[0].innerHTML = ten;
+                table.rows[rIndex].cells[1].innerHTML = sl;
+                table.rows[rIndex].cells[2].innerHTML = dv;
+                table.rows[rIndex].cells[3].innerHTML = gia;
+                
+            }
+        }
+
+        function removeSelectedRow() {
+            table.deleteRow(rIndex);
+            document.getElementById("ten").value = "";
+            document.getElementById("sl").value = "";
+            document.getElementById("dv").value = "";
+            document.getElementById("gia").value = "";
+            
+        }
+
+        function refresh() {
+            document.getElementById("ten").value = "";
+            document.getElementById("sl").value = "";
+            document.getElementById("dvi").value = "";
+            document.getElementById("gia").value = "";
+        }
+    </script>
 </body>
 </html>

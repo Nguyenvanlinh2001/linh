@@ -40,7 +40,7 @@
     font-weight: 300;
     cursor: pointer;
     line-height: 46px;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 .header__navbar-item-link--strong{
     font-weight: 500;
@@ -166,10 +166,7 @@ body{
     line-height: 46px;
     padding: 0 24px;
     display: block;
-}
-.itemt li:hover a {
-    color: black;
-    background-color: #ccc;
+    font-size: 25px;
 }
 .container {
     margin-top: 20px;
